@@ -1,0 +1,11 @@
+.merchItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+}
+
+.merchItems li {
+   background-color: brown;
+   margin:4px;
+   border-radius: 30px;
+};

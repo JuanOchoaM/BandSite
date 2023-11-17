@@ -7,24 +7,24 @@ import {
 import "./navbar.css"
 import Login from "./Registration/Login";
 import SignUp from "./Registration/SignUp";
+import Merch from "./pages/Merch";
+import NavBar from "./NavBar";
 
 export default function Navigator() {
   return (
    <Router>
+    <NavBar />
        <Routes>
+         <Route exact path="/" element={<Merch />}/>
+         <Route path="/merch" element={<Merch />}/>
          <Route path="/music" element={<Music />}/>
-         <Route path="/live-performances" element={<LivePerformances />}/>
-         <Route path="/" element={<Home />}/>
+         <Route path="/live-performance" element={<LivePerformances />}/>
          <Route path="/login" element={<SignUp />}/>
          <Route path="/signup" element={<Login />}/>
        </Routes>
    </Router>
   
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 function Music() {
