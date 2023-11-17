@@ -5,6 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import "./navbar.css"
+import Login from "./Registration/Login";
+import SignUp from "./Registration/SignUp";
 
 export default function Navigator() {
   return (
@@ -13,6 +15,8 @@ export default function Navigator() {
          <Route path="/music" element={<Music />}/>
          <Route path="/live-performances" element={<LivePerformances />}/>
          <Route path="/" element={<Home />}/>
+         <Route path="/login" element={<SignUp />}/>
+         <Route path="/signup" element={<Login />}/>
        </Routes>
    </Router>
   
