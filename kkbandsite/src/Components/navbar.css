@@ -1,7 +1,15 @@
+.navbar {
+    background-color: rgba(64, 13, 31, .5);
+    padding-bottom: 3px;
+    font-size: large;
+    
+}
+
 a {
     align-items: center;
     padding: 15px;
 }
+
 
 
 #login {

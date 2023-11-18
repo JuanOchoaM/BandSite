@@ -4,7 +4,7 @@ import "./Card.css"
 //Effectively a simple container for the merch items. Takes in props where props is a json object with attributes image, name, body, and price. Should be formatted within the function in main though.
 const simpleCard = (props) => {
   return (
-    <div style={{ width: '18rem' }}>
+    <div className="card" style={{ width: '18rem' }}>
       <img  src={props.image} alt="merch item"/>
       <div className='body'>
         <h3>{props.name}</h3>

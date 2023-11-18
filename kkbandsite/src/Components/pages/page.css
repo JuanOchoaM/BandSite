@@ -7,7 +7,7 @@
 }
 
 .merchItems li {
-   background-color: brown;
+   background-color: rgba(64, 13, 31, .9);
    margin:4px;
    border-radius: 30px;
 };

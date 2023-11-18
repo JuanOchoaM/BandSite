@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import background from './../../assets/sign_up_bg.png'
 import './signup.css'
 
 export default function SignUp() {
@@ -16,10 +15,6 @@ export default function SignUp() {
 
     const emailValidation = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-
-    function setBackground() {
-        document.body.style.backgroundImage = `url(${background})`;
-    }
 
     function onFocus(defaultValue, currentValue, setValue) {
         if (defaultValue === currentValue) {
@@ -91,7 +86,6 @@ export default function SignUp() {
         }
     }
 
-    setBackground();
     return (
         <div>
             <form class="signup-form" >

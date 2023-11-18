@@ -50,8 +50,10 @@ const addCard = (props) => {
           type="text"
         />
         </li>
-        </ul>
+        <li>
         <Button type="submit">Add User</Button>
+        </li>
+        </ul>
       </form>
     </div>
   );
