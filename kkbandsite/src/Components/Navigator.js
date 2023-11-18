@@ -18,9 +18,9 @@ export default function Navigator() {
          <Route exact path="/" element={<Merch />}/>
          <Route path="/merch" element={<Merch />}/>
          <Route path="/music" element={<Music />}/>
-         <Route path="/live-performance" element={<LivePerformances />}/>
-         <Route path="/login" element={<SignUp />}/>
-         <Route path="/signup" element={<Login />}/>
+         <Route path="/live-performances" element={<LivePerformances />}/>
+         <Route path="/login" element={<Login />}/>
+         <Route path="/signup" element={<SignUp />}/>
        </Routes>
    </Router>
   

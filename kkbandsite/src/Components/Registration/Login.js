@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import './signup.css'
-import FormGroup from '@mui/material/FormGroup';
-import Input from '@mui/material/Input'
-import InputLabel from '@mui/material/InputLabel';
 
 export default function Login() {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("Email");
     const [password, setPassword] = useState("");
 
-    
     return (
-        <FormGroup className="login">
-            
-            <InputLabel htmlFor="my-input">Email</InputLabel>
-            <Input id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            
-            <InputLabel htmlFor="my-input">Password</InputLabel>
-            <Input id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </FormGroup>
+        <div>
+            <form class="login-form"> 
+                <h2>Login</h2>
+                <input  type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <button class="login-submit" type="submit">Login</button>
+                <a href="/signup">Don't have an account? Sign up here!</a>
+            </form>
+        </div>
     )
 
 }

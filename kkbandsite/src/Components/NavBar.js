@@ -14,7 +14,7 @@ export default function NavBar() {
                         <NavLink to="/merch" className="Navlink">
                             Merch
                         </NavLink>
-                        <NavLink to="/sign-up /login" className="Navlink">
+                        <NavLink to="/signup" className="Navlink">
                             Sign Up / Login
                         </NavLink>
                     </div>
