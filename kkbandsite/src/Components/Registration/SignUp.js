@@ -1,30 +1,31 @@
 import React, { useState } from "react";
+import background from './../../assets/sign_up_bg.png'
 import './signup.css'
-import FormGroup from '@mui/material/FormGroup';
-import Input from '@mui/material/Input'
-import InputLabel from '@mui/material/InputLabel';
 
 export default function SignUp() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("First Name");
+    const [lastName, setLastName] = useState("Last Name");
+    const [email, setEmail] = useState("Email");
     const [password, setPassword] = useState("");
 
-    
+    function setBackground() {
+        document.body.style.backgroundImage = `url(${background})`;
+    }
+
+    setBackground();
     return (
-        <FormGroup className="signup">
-            <InputLabel htmlFor="my-input">First Name</InputLabel>
-            <Input id="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
-            
-            <InputLabel htmlFor="my-input">Last Name</InputLabel>
-            <Input id="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
-            
-            <InputLabel htmlFor="my-input">Email</InputLabel>
-            <Input id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            
-            <InputLabel htmlFor="my-input">Password</InputLabel>
-            <Input id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </FormGroup>
+        <div>
+            <form>
+                <h2>Sign Up</h2>
+                <input  type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+                <input  type="text" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+                <input  type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input  type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <button type="submit">Sign Up</button>
+                <a href="/login">Already have an account? Login here!</a>
+            </form>
+        </div>
+   
     )
 
 }

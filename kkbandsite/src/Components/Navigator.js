@@ -15,8 +15,8 @@ export default function Navigator() {
          <Route path="/music" element={<Music />}/>
          <Route path="/live-performances" element={<LivePerformances />}/>
          <Route path="/" element={<Home />}/>
-         <Route path="/login" element={<SignUp />}/>
-         <Route path="/signup" element={<Login />}/>
+         <Route path="/login" element={<Login />}/>
+         <Route path="/signup" element={<SignUp />}/>
        </Routes>
    </Router>
   
