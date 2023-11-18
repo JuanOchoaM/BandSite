@@ -1,6 +1,7 @@
 import "./page.css";
 import React from "react";
 import SimpleCard from "../Shop/SimpleCard";
+import AddCard from "../Shop/AddCard";
 
 // Will
 
@@ -18,6 +19,13 @@ const merchTabletest = [
     Body: "testbody2",
     Price: 690,
     Image: "https://png.pngtree.com/png-vector/20210313/ourmid/pngtree-male-cowboy-hat-with-front-tie-rope-png-image_3053578.jpg"
+},
+{
+    key: 3,
+    Name: "wehhh",
+    Body: "are u fr",
+    Price: 4000,
+    Image: "https://i.pinimg.com/originals/55/71/f6/5571f65bba2f26700e12f918e152cdaf.jpg"
 }
 ];
 
@@ -38,6 +46,7 @@ export default function merch() {
     return (
      <div >
      <ul className="merchItems">
+        <li><AddCard /></li>
         {createCards()}
      </ul>
      </div>

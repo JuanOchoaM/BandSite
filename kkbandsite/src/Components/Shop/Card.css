@@ -1,0 +1,44 @@
+  /* this mostly affects the SimpleCard */
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+    padding: 15px;
+    
+  }
+
+.buy {
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+.body {
+    text-align: right;
+}
+
+
+/* This mostly affects the addcard */
+input {
+  width: 100%;
+  text-align: left;
+  width: auto;
+}
+
+label, input {
+  display: inline-block;
+}
+label {
+  width: 30%;
+  text-align: right;
+}
+li {
+  list-style-type: none;
+}
+.addForm {
+  margin-bottom: 25px;
+  object-fit: contain;
+  margin-top: 200px;
+  position:relative;
+}
