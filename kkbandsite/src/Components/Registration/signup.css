@@ -4,20 +4,33 @@ form {
     row-gap: 2rem;
     width: 50rem;
     padding: 2.5rem;
-    background-color: #0D243C;
     opacity: 0.83;
     margin: auto;
     margin-top: 5rem;
 }
 
-button {
+.signup-form {
+    background-color: #0D243C;
+}
+
+.login-form {
     background-color: #680B2C;
+}
+
+button {
     color: white;
     padding: 1rem;
     border-style: none;
     font-size: 24px;
-    font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Judson', serif;
+}
+
+.signup-submit {
+    background-color: #680B2C;
+}
+
+.login-submit {
+    background-color: #0D243C;
 }
 
 input {
@@ -25,6 +38,8 @@ input {
     border-style: none;
     padding: 0.75rem;
     font-size: 18px;
+    box-sizing: border-box;
+    width: 100%;
     font-family: 'Judson', serif;
 }
 
@@ -41,4 +56,20 @@ h2 {
     font-family: 'Jacques Francois Shadow', serif;
     color: white;
     font-size: 36px;
+}
+
+p {
+    margin-top: 0.25rem;
+    margin-bottom: 0px;
+    color: white;
+    text-align: left;
+}
+
+label {
+    color: white;
+    font-family: 'Judson', serif;
+}
+
+.input-div {
+    text-align: left;
 }
