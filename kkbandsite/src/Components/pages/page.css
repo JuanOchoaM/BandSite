@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style-type: none;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .merchItems li {
-   background-color: brown;
+   background-color: rgba(64, 13, 31, .9);
    margin:4px;
    border-radius: 30px;
 };
