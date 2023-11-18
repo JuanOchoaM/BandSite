@@ -1,8 +1,8 @@
-ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
+a {
+    align-items: center;
+    padding: 15px;
 }
+
 
 #login {
     font-size: small;
