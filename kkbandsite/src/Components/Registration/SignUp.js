@@ -89,7 +89,7 @@ export default function SignUp() {
     return (
         <div>
             <form class="signup-form" >
-                <h2>Sign Up</h2>
+                <h2 class="form-header">Sign Up</h2>
                 <div class="input-div">
                     <label>First Name</label>
                     <input id="signup-first-name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} onFocus={(e) => onFocus("First Name", e.target.value, setFirstName)}/>
@@ -110,8 +110,8 @@ export default function SignUp() {
                     <input id="signup-password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} onFocus={(e) => onFocusPassword("Password", e.target.value, setPassword)}/>
                     <p display={passwordError.trim === "" ? 'none' : 'block'} id="signup-password-error">{passwordError}</p>
                 </div>
-                <button class="signup-submit" onClick={(e) => submit(e)}>Sign Up</button>
-                <a href="/login">Already have an account? Login here!</a>
+                <button class="signup-submit submit-button" onClick={(e) => submit(e)}>Sign Up</button>
+                <a class="form-help" href="/login">Already have an account? Login here!</a>
             </form>
         </div>
    
