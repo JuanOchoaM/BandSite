@@ -15,6 +15,7 @@ const AddCard = () => {
   );
   
   return (
+    <div className='card'>
     <div className="addForm">
       <h3>Add New Item</h3> {/* I've found that posting the alert is more reliable than using the console.log, cos the log clears on page reset */}
       <form onSubmit={(e) => { alert("data object: " + JSON.stringify(data, null, 2)); e.target.reset(); } }>
@@ -56,6 +57,7 @@ const AddCard = () => {
         </li>
         </ul>
       </form>
+    </div>
     </div>
   );
 }

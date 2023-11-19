@@ -16,7 +16,9 @@
 .card p {
     text-align: right;
 }
-
+.card h3 {
+  color: white;
+}
 
 /* This mostly affects the addcard */
 
