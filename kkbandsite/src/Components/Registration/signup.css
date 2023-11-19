@@ -1,4 +1,4 @@
-.signup-form form {
+form {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -7,6 +7,7 @@
     opacity: 0.83;
     margin: auto;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .signup-form {
@@ -23,6 +24,7 @@ button {
     border-style: none;
     font-size: 24px;
     font-family: 'Judson', serif;
+    cursor: pointer;
 }
 
 .signup-submit {
@@ -43,16 +45,16 @@ input {
     font-family: 'Judson', serif;
 }
 
-a {
+.form-help {
     color: white;
     text-decoration: none;
 }
 
-a:hover {
+.form-help:hover {
     text-decoration: underline;
 }
 
-h2 {
+.form-header {
     font-family: 'Jacques Francois Shadow', serif;
     color: white;
     font-size: 36px;
