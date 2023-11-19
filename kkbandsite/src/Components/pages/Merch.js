@@ -3,8 +3,9 @@ import React from "react";
 import SimpleCard from "../Shop/SimpleCard";
 import AddCard from "../Shop/AddCard";
 
-// Will
 
+
+/* Dummy Data  */
 const merchTabletest = [
 {
     key: 1,
@@ -31,6 +32,7 @@ const merchTabletest = [
 
 function createCards() {
 return (
+    /* Maps the data in the table to a list of items to be displayed */
     merchTabletest.map((item) => (
     <li key={item.key} className="merchItems">
         <SimpleCard 
@@ -41,12 +43,23 @@ return (
     </li>
 )))
 }
+/* here is the temp variable isLoggedIn, which is controlled by whether or not the user is logged in! */
+
+let isLoggedIn = true;
+
+function loginCheck() {
+    if (isLoggedIn) {
+        return (<li><AddCard /> </li>);
+    }
+}
+
 
 export default function merch() {
     return (
      <div >
+    {/*This UL displays the list of items, as well as conditionally shows a card to add new items with! It only displays if the user is logged in, and acts as the first list item */}
      <ul className="merchItems">
-        <li><AddCard /></li>
+        {loginCheck()}
         {createCards()}
      </ul>
      </div>

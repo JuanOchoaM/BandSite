@@ -1,27 +1,28 @@
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
 import "./Card.css"
 
-let data = {
-  Name: "",
-  Price: 0,
-  Image: "",
-  Body: ""
-}
 
-function changeHandler(event) {
-    data[event.target.id] = event.target.value
-  };
-
-const addCard = (props) => {
+/* State value data is the form data. Easy .json format that can be reformatted to fit the mongo model. Onsubmit will be able to submit a post request easily.*/
+const AddCard = () => {
+  const [data, setData] = useState(
+    {
+    Name: "",
+    Price: 0,
+    Image: "",
+    Body: ""
+    }
+  );
+  
   return (
     <div className="addForm">
-      <h3>Add New Item</h3>
-      <form onSubmit={() => alert("data object: " + JSON.stringify(data, null, 2)) }>
+      <h3>Add New Item</h3> {/* I've found that posting the alert is more reliable than using the console.log, cos the log clears on page reset */}
+      <form onSubmit={(e) => { alert("data object: " + JSON.stringify(data, null, 2)); e.target.reset(); } }>
         <ul>
           <li>
         <label>Name</label>
         <input 
-          onChange={changeHandler}
+          onChange={(e) => setData({...data, Name:e.target.value})}
           id="Name"
           type="text"
         />
@@ -29,7 +30,7 @@ const addCard = (props) => {
         <li>
         <label>Price</label>
         <input
-          onChange={changeHandler}
+          onChange={(e) => setData({...data, Price:e.target.value})}
           id="Price"
           type="number"
         />
@@ -37,7 +38,7 @@ const addCard = (props) => {
         <li>
         <label>Link to image</label>
          <input
-          onChange={changeHandler}
+          onChange={(e) => setData({...data, Image:e.target.value})}
           id="Image"
           type="text"
         />
@@ -45,7 +46,7 @@ const addCard = (props) => {
         <li>
         <label>Description</label>
          <input
-          onChange={changeHandler}
+          onChange={(e) => setData({...data, Body:e.target.value})}
           id="Body"
           type="text"
         />
@@ -59,4 +60,4 @@ const addCard = (props) => {
   );
 }
 
-export default addCard;
+export default AddCard;
