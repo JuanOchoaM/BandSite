@@ -15,3 +15,8 @@
 h3 {
   color: white;
 }
+
+.merch-info {
+  display: flex;
+  justify-content: center;
+}

@@ -31,37 +31,37 @@ const merchTabletest = [
 ];
 
 function createCards() {
-return (
-    /* Maps the data in the table to a list of items to be displayed */
-    merchTabletest.map((item) => (
-    <li key={item.key} className="merchItems">
-        <SimpleCard 
-        name={item.Name}
-        price={item.Price} 
-        image={item.Image}
-        body={item.Body} />
-    </li>
-)))
-}
-/* here is the temp variable isLoggedIn, which is controlled by whether or not the user is logged in! */
-
-let isLoggedIn = true;
-
-function loginCheck() {
-    if (isLoggedIn) {
-        return (<li><AddCard /> </li>);
-    }
-}
-
-
-export default function merch() {
     return (
-     <div >
-    {/*This UL displays the list of items, as well as conditionally shows a card to add new items with! It only displays if the user is logged in, and acts as the first list item */}
-     <ul className="merchItems">
-        {loginCheck()}
-        {createCards()}
-     </ul>
-     </div>
-    )
+        /* Maps the data in the table to a list of items to be displayed */
+        merchTabletest.map((item) => (
+        <li key={item.key} className="merch-info">
+            <SimpleCard
+            name={item.Name}
+            price={item.Price} 
+            image={item.Image}
+            body={item.Body} />
+        </li>
+    )))
+    }
+    /* here is the temp variable isLoggedIn, which is controlled by whether or not the user is logged in! */
+
+    let isLoggedIn = true;
+
+    function loginCheck() {
+        if (isLoggedIn) {
+            return (<li><AddCard /> </li>);
+        }
+    }
+
+
+    export default function merch() {
+        return (
+        <div >
+            {/*This UL displays the list of items, as well as conditionally shows a card to add new items with! It only displays if the user is logged in, and acts as the first list item */}
+            <ul className="merchItems">
+                {loginCheck()}
+                {createCards()}
+            </ul>
+        </div>
+        )
 }
