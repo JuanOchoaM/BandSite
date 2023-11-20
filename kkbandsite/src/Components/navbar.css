@@ -1,8 +1,8 @@
 .navbar {
-    background-color: rgba(64, 13, 31, .5);
+    background-color: rgba(64, 13, 31, .8);
     padding-bottom: 3px;
     font-size: large;
-    
+    backdrop-filter: blur(3px);
 }
 
 a {
@@ -10,10 +10,20 @@ a {
     padding: 15px;
 }
 
-
-
-#login {
-    font-size: small;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.logo-title {
+    display: flex;
+    align-items: center;
 }
+
+.logo {
+    width: 50px;
+    height: auto; 
+    margin-right: 10px; 
+}
+
+
+/*#login {
+    font-size: small;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}*/
 
