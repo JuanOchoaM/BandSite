@@ -9,7 +9,7 @@
 .merchItems li {
    background-color: rgba(64, 13, 31, .9);
    margin:4px;
-   border-radius: 30px;
+   border-radius: 10px;
 };
 
 h3 {

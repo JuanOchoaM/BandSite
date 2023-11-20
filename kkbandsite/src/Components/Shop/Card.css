@@ -43,15 +43,6 @@
   width: auto;
 }
 
-.addForm label, input {
-  display: inline-block;
-}
-
-.addForm label {
-  width: 30%;
-  text-align: right;
-}
-
 .addForm li {
   list-style-type: none;
 }
@@ -59,4 +50,22 @@
 .addForm {
   object-fit: contain;
   position: relative;
+}
+
+.form-information {
+  padding: 0 0 0 0; 
+  text-align: center;
+}
+
+.form-input label,input {
+  display: block; 
+}
+
+.form-input {
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
+
+.addForm h3 {
+  color: white; 
 }
