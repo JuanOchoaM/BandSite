@@ -21,6 +21,10 @@ a {
     margin-right: 10px; 
 }
 
+.Navlink {
+    color: white; 
+    padding: 0 40px; 
+}
 
 /*#login {
     font-size: small;
