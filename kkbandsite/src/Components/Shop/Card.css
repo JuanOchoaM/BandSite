@@ -1,23 +1,25 @@
-  /* this mostly affects the SimpleCard */
+  /* this mostly affects the SimpleCard */  
+
 .card img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 20px;
-    padding: 15px;
-  }
+  width: 200px;
+  height: 200px;
+  object-fit: contain; 
+  border-radius: 20px;
+  padding-top: 20px;
+}
 
 .buy {
-    text-align: left;
-    padding-left: 20px;
+    text-align: center;
     padding-bottom: 10px;
-  }
+}
 
 .card p {
-    text-align: right;
+    text-align: center;
 }
+
 .card h3 {
   color: white;
+  text-align: center;
 }
 
 /* This mostly affects the addcard */
@@ -27,18 +29,22 @@
   text-align: left;
   width: auto;
 }
+
 .addForm label, input {
   display: inline-block;
 }
+
 .addForm label {
   width: 30%;
   text-align: right;
 }
+
 .addForm li {
   list-style-type: none;
 }
+
 .addForm {
   margin-top: 100px;
   object-fit: contain;
-  position:relative;
+  position: relative;
 }

@@ -13,13 +13,13 @@ const simpleCard = (props) => {
         <p>
           {props.body}
         </p>
-        </div>
-        <div className='buy'>
+      </div>
+      <div className='buy'>
         <p className='Price'>
-         ${props.price} 
+          ${props.price} 
         </p>
-        <Button variant="primary" onClick={() => console.log("User added item to cart")}>Add to Cart</Button>
-        </div>
+        <Button variant="primary" className="buy-button" onClick={() => console.log("User added item to cart")}>Add to Cart</Button>
+      </div>
     </div>
   );
 }
