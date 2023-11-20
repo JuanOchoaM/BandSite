@@ -1,6 +1,12 @@
 /* this mostly affects the SimpleCard */  
 
-.card img {
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
   width: 200px;
   height: 200px;
   object-fit: contain; 
@@ -9,18 +15,17 @@
   margin: 0 auto; 
 }
 
-.buy {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.card p {
-    text-align: center;
-}
-
-.card h3 {
-  color: white;
+.name {
   text-align: center;
+  color: white;
+}
+
+.body {
+  text-align: center;
+}
+
+.price {
+  text-align: center; 
 }
 
 .buy-button {
