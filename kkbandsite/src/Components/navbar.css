@@ -13,12 +13,13 @@ a {
 .logo-title {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
     width: 50px;
     height: auto; 
-    margin-right: 10px; 
+    margin-right: 10px;     
 }
 
 .Navlink {

@@ -6,10 +6,12 @@ import "./navbar.css"
 export default function NavBar() {
         return (
             <div className="navbar">
-               <div className="logo-title">
-               <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x4.jpg" alt="Karma Kat Logo" className="logo"/>
+                <div className="logo-title">
+                    <a href="/merch">
+                        <img href="/merch" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x4.jpg" alt="Karma Kat Logo" className="logo"/>
+                    </a>
                     <h1 className="title">Karma Kat</h1>
-               </div>
+                </div>
                 <div className="nav-links">
                     <NavLink to="/music" className="Navlink">
                         Music
