@@ -1,14 +1,14 @@
 import React from "react";
-import { NavLink,
- } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navbar.css"
+import logo from "../assets/Karma_Kat2 copy.png"
 // Will
 export default function NavBar() {
         return (
             <div className="navbar">
                 <div className="logo-title">
                     <a href="/merch">
-                        <img href="/merch" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x4.jpg" alt="Karma Kat Logo" className="logo"/>
+                        <img href="/merch" src={logo} alt="Karma Kat Logo" className="logo"/>
                     </a>
                     <h1 className="title">Karma Kat</h1>
                 </div>
