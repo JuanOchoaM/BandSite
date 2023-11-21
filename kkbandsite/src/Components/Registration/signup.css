@@ -11,10 +11,12 @@
 
 .signup-form {
     background-color: rgba(13,36,60, 0.83);
+    backdrop-filter: blur(2px);
 }
 
 .login-form {
     background-color: rgba(104, 11, 44, 0.83);
+    backdrop-filter: blur(2px);
 }
 
 button {
