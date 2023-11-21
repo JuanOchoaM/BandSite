@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup.css'
 
-export default function Login() {
+export default function Login(props) {
     const [email, setEmail] = useState("Email");
     const [password, setPassword] = useState("Password");
     const [emailError, setEmailError] = useState("");
@@ -54,8 +54,9 @@ export default function Login() {
 
     function submit(e) {
         e.preventDefault();
-        if (validate()) {
+        if (validate() && email === "test@uga.edu") {
             console.log("navigating");
+            props.setIsAuthenticated(true);
             navigate("/")
         }
     }

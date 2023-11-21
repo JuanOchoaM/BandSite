@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,16 +11,19 @@ import Merch from "./pages/Merch";
 import NavBar from "./NavBar";
 
 export default function Navigator() {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
    <Router>
-    <NavBar />
+    <NavBar isAuthenticated={isAuthenticated}  setIsAuthenticated={setIsAuthenticated}/>
        <Routes>
-         <Route exact path="/" element={<Merch />}/>
-         <Route path="/merch" element={<Merch />}/>
+         <Route exact path="/" element={<Merch  isAuthenticated={isAuthenticated}/>}/>
+         <Route path="/merch" element={<Merch  isAuthenticated={isAuthenticated} />}/>
          <Route path="/music" element={<Music />}/>
          <Route path="/live-performances" element={<LivePerformances />}/>
-         <Route path="/login" element={<Login />}/>
-         <Route path="/signup" element={<SignUp />}/>
+         <Route path="/login" element={<Login isAuthenticated={isAuthenticated}  setIsAuthenticated={setIsAuthenticated}/>}/>
+         <Route path="/signup" element={<SignUp isAuthenticated={isAuthenticated}  setIsAuthenticated={setIsAuthenticated}/>}/>
        </Routes>
    </Router>
   

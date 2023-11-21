@@ -28,7 +28,7 @@ const merchTabletest = [
     }
 ];
 
-export default function Merch() {
+export default function Merch(props) {
     const [isLoggedIn, setLoggedIn] = useState(true);
 
     const toggleLoginStatus = () => {
@@ -36,7 +36,7 @@ export default function Merch() {
     };
 
     function loginCheck() {
-        if (isLoggedIn) {
+        if (props.isAuthenticated) {
             return (
                 <li><AddCard /></li>
             );
@@ -59,11 +59,6 @@ export default function Merch() {
 
     return (
         <div>
-            {/* Button to toggle login status */}
-            <button onClick={toggleLoginStatus}>
-                Toggle Login Status
-            </button>
-
             {/* UL displaying the list of items */}
             <ul className="merchItems">
                 {loginCheck()}

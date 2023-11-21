@@ -3,7 +3,15 @@ import { NavLink,
  } from "react-router-dom";
 import "./navbar.css"
 // Will
-export default function NavBar() {
+export default function NavBar(props) {
+
+    function logOut(e) {
+        if (props.isAuthenticated) {
+            e.preventDefault();
+            props.setIsAuthenticated(false);
+        }
+    }
+
         return (
             <div className="navbar">
                 <div className="logo-title">
@@ -22,8 +30,8 @@ export default function NavBar() {
                     <NavLink to="/merch" className="Navlink">
                         Merch
                     </NavLink>
-                    <NavLink to="/signup" className="Navlink" id="login">
-                        Sign Up / Login
+                    <NavLink to={props.isAuthenticated ? "/login" : "/signup"} className="Navlink" id="login" onClick={(e) => logOut(e)}>
+                         {props.isAuthenticated ? "Log Out" : "Sign Up / Login"}
                     </NavLink>
                 </div>
             </div>
