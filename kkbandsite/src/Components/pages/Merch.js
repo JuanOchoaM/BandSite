@@ -17,7 +17,7 @@ const merchTabletest = [
         Name: "testname2",
         Body: "testbody2",
         Price: 690,
-        Image: "https://png.pngtree.com/png-vector/20210313/ourmid/pngtree-male-cowboy-hat-with-front-tie-rope-png-image_3053578.jpg"
+        Image: "https://pngimg.com/d/cowboy_hat_PNG72.png"
     },
     {
         key: 3,

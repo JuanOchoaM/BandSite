@@ -14,10 +14,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-size: x-large;
 }
 
 .logo {
-    width: 50px;
+    width: 70px;
     height: auto; 
     margin-right: 10px;     
 }
