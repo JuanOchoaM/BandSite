@@ -53,7 +53,7 @@ const AddCard = () => {
               />
             </li>
             <li>
-              <Button type="submit">Add User</Button>
+              <Button type="submit">Add Item</Button>
             </li>
           </ul>
         </form>
