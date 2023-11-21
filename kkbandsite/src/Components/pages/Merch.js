@@ -29,11 +29,7 @@ const merchTabletest = [
 ];
 
 export default function Merch(props) {
-    const [isLoggedIn, setLoggedIn] = useState(true);
 
-    const toggleLoginStatus = () => {
-        setLoggedIn(!isLoggedIn);
-    };
 
     function loginCheck() {
         if (props.isAuthenticated) {

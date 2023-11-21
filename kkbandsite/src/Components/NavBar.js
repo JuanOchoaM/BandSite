@@ -2,13 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css"
 import logo from "../assets/Karma_Kat2 copy.png"
+import { useNavigate } from "react-router-dom";
 // Will
 export default function NavBar(props) {
+
+    const navigate = useNavigate(); 
+
 
     function logOut(e) {
         if (props.isAuthenticated) {
             e.preventDefault();
             props.setIsAuthenticated(false);
+            navigate("/")
         }
     }
 
