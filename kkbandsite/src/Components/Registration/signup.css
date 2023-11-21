@@ -4,18 +4,17 @@
     row-gap: 2rem;
     width: 50rem;
     padding: 2.5rem;
-    opacity: 0.83;
     margin: auto;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
 
 .signup-form {
-    background-color: #0D243C;
+    background-color: rgba(13,36,60, 0.83);
 }
 
 .login-form {
-    background-color: #680B2C;
+    background-color: rgba(104, 11, 44, 0.83);
 }
 
 button {
@@ -31,10 +30,12 @@ button {
 
 .signup-submit {
     background-color: #680B2C;
+    color: white;
 }
 
 .login-submit {
     background-color: #0D243C;
+    color: white;
 }
 
 input {
@@ -76,4 +77,20 @@ label {
 
 .input-div {
     text-align: left;
+}
+
+#signup-first-name {
+    background-color: rgba(255,255,255,1);
+}
+
+#signup-last-name {
+    background-color: rgba(255,255,255,1);
+}
+
+#signup-email {
+    background-color: rgba(255,255,255,1);
+}
+
+#signup-password {
+    background-color: rgba(255,255,255,1);
 }
