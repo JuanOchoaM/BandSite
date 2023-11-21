@@ -4,6 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+
+.card * {
+  flex: 1;
 }
 
 .image {
@@ -50,8 +55,10 @@
 }
 
 .addForm {
-  object-fit: contain;
+  /* object-fit: contain; */
+  width: 80%; 
   position: relative;
+
 }
 
 .form-information {
@@ -72,7 +79,7 @@
 }
 
 .form-input input {
-  width: 80%; 
+  width: 80%;  
 }
 
 .addForm h3 {
