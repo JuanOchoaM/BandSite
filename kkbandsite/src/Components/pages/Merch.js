@@ -43,6 +43,7 @@ export default function Merch(props) {
             merchTabletest.map((item) => (
                 <li key={item.key} className="merch-info">
                     <SimpleCard
+                        isAuthenticated={props.isAuthenticated}
                         name={item.Name}
                         price={item.Price}
                         image={item.Image}
