@@ -29,3 +29,13 @@ a {
     padding: 0 40px; 
 }
 
+.socialsbox {
+        display: flex;
+        margin-left: 50px;
+}
+.nav-links {
+    margin-left: 50px;
+    display: flex;
+    
+justify-content:center;
+}

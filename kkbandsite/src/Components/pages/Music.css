@@ -1,0 +1,8 @@
+.iframeStyle {
+    background-color: rgba(64, 13, 31, .8);
+    padding-bottom: 300px;
+    padding-top: 30px;
+    font-size: large;
+    backdrop-filter: blur(3px);
+    border-radius: '12px';
+}

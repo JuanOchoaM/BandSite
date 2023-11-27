@@ -9,6 +9,8 @@ import Login from "./Registration/Login";
 import SignUp from "./Registration/SignUp";
 import Merch from "./pages/Merch";
 import NavBar from "./NavBar";
+import LivePerformances from "./pages/LivePerfomances";
+import Music from "./pages/Music";
 
 export default function Navigator() {
 
@@ -29,12 +31,3 @@ export default function Navigator() {
   
   );
 }
-
-function Music() {
-  return <h2>Music</h2>;
-}
-
-function LivePerformances() {
-  return <h2>Live Performances</h2>;
-}
-

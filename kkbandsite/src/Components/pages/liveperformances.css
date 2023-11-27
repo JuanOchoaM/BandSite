@@ -1,0 +1,17 @@
+#seated-55fdf2c0 {
+    color: red;
+    width: 100%; 
+    height: 100%; 
+}
+  div.seated-events-table  {
+    background-color: lavender;
+    color: aliceblue;
+  }
+  a.seated-event-link{
+    color: purple;
+    background-color: lavender;
+  }
+  div.seated-event-row{
+    color: purple;
+  }
+  

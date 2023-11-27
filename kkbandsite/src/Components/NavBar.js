@@ -3,12 +3,10 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css"
 import logo from "../assets/Karma_Kat2 copy.png"
 import { useNavigate } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons'
 // Will
 export default function NavBar(props) {
-
     const navigate = useNavigate(); 
-
-
     function logOut(e) {
         if (props.isAuthenticated) {
             e.preventDefault();
@@ -29,7 +27,7 @@ export default function NavBar(props) {
                     <NavLink to="/music" className="Navlink">
                         Music
                     </NavLink>
-                    <NavLink to="/live-performance" className="Navlink">
+                    <NavLink to="/live-performances" className="Navlink">
                         Live Performances
                     </NavLink>
                     <NavLink to="/merch" className="Navlink">
@@ -38,8 +36,15 @@ export default function NavBar(props) {
                     <NavLink to={props.isAuthenticated ? "/login" : "/signup"} className="Navlink" id="login" onClick={(e) => logOut(e)}>
                          {props.isAuthenticated ? "Log Out" : "Sign Up / Login"}
                     </NavLink>
+                    <div class="socialsbox">
+                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://twitter.com" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
+                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.instagram.com/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
+                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.youtube.com/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
+                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.tiktok.com/en/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
+                    </div>
                 </div>
             </div>
         );
     };
      
+

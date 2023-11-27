@@ -1,5 +1,4 @@
 // Merch.js
-import React, { useState } from 'react';
 import "./page.css";
 import SimpleCard from "../Shop/SimpleCard";
 import AddCard from "../Shop/AddCard";
