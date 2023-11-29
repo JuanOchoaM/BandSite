@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import "./Card.css"
+import axios from 'axios';
 
 
 /* State value data is the form data. Easy .json format that can be reformatted to fit the mongo model. Onsubmit will be able to submit a post request easily.*/
@@ -14,11 +15,23 @@ const AddCard = () => {
     }
   );
   
+  function postData(data) {
+    axios
+        .post('http://127.0.0.1:3000/api/items', data)
+        .then((res) => {
+            console.log("Successfully Posted: ");
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.log('Error from ');
+        });
+  }
+
   return (
     <div className='card'>
       <div className="addForm">
         <h3>Add New Item</h3> {/* I've found that posting the alert is more reliable than using the console.log, cos the log clears on page reset */}
-        <form onSubmit={(e) => { alert("data object: " + JSON.stringify(data, null, 2)); e.target.reset(); } }>
+        <form onSubmit={(e) => { postData(data); e.target.reset(); } }>
           <ul className="form-information">
             <li className="form-input">
               <label className="add-name">Name</label>

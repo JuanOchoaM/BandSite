@@ -22,7 +22,7 @@ const [merchItems, setMerchItems] = useState([]);
     function loginCheck() {
         if (props.isAuthenticated) {
             return (
-                <li><AddCard /></li>
+                <li key={23} ><AddCard /></li>
             );
         }
     }
@@ -31,8 +31,9 @@ const [merchItems, setMerchItems] = useState([]);
         if (merchItems) {
         return (
             merchItems.map((item) => (
-                <li key={item.key} className="merch-info">
+                <li key={item._id} className="merch-info">
                     <SimpleCard
+                        id={item._id}
                         isAuthenticated={props.isAuthenticated}
                         name={item.Name}
                         price={item.Price}

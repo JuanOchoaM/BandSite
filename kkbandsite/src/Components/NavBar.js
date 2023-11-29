@@ -36,7 +36,7 @@ export default function NavBar(props) {
                     <NavLink to={props.isAuthenticated ? "/login" : "/signup"} className="Navlink" id="login" onClick={(e) => logOut(e)}>
                          {props.isAuthenticated ? "Log Out" : "Sign Up / Login"}
                     </NavLink>
-                    <div class="socialsbox">
+                    <div className="socialsbox">
                     <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://twitter.com" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
                     <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.instagram.com/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
                     <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.youtube.com/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
