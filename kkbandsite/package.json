@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
     "config": "^3.3.9",
@@ -26,7 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "app": "nodemon app.js",
+    "app": "nodemon ./server/app.js",
     "start": "react-scripts start",
     "start-s": "node ./server/app.js",
     "build": "react-scripts build",
