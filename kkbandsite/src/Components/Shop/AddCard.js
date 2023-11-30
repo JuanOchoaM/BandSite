@@ -27,6 +27,8 @@ const handleSubmit = (e) => {
     Image: "",
     Body: ""
   });
+
+  console.log("Data after reset: ", data)
 };
 
 
