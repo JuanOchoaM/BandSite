@@ -4,7 +4,7 @@ import "./Card.css"
 
 
 /* State value data is the form data. Easy .json format that can be reformatted to fit the mongo model. Onsubmit will be able to submit a post request easily.*/
-const AddCard = () => {
+const AddCard = ({onAddItem}) => {
   const [data, setData] = useState(
     {
     Name: "",
@@ -14,11 +14,27 @@ const AddCard = () => {
     }
   );
   
+const handleSubmit = (e) => {
+  e.preventDefault(); 
+  console.log("Adding merchandise item");
+  console.log(data); 
+
+  onAddItem(data);
+
+  setData({
+    Name: "",
+    Price: 0,
+    Image: "",
+    Body: ""
+  });
+};
+
+
   return (
     <div className='card'>
       <div className="addForm">
         <h3>Add New Item</h3> {/* I've found that posting the alert is more reliable than using the console.log, cos the log clears on page reset */}
-        <form onSubmit={(e) => { alert("data object: " + JSON.stringify(data, null, 2)); e.target.reset(); } }>
+        <form onSubmit={handleSubmit} >
           <ul className="form-information">
             <li className="form-input">
               <label className="add-name">Name</label>

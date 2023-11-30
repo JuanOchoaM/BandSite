@@ -2,6 +2,7 @@
 import "./page.css";
 import SimpleCard from "../Shop/SimpleCard";
 import AddCard from "../Shop/AddCard";
+import { useState } from "react";
 
 const merchTabletest = [
     {
@@ -29,19 +30,26 @@ const merchTabletest = [
 
 export default function Merch(props) {
 
+    const [items, setItems] = useState(merchTabletest);
 
     function loginCheck() {
         if (props.isAuthenticated) {
             return (
-                <li><AddCard /></li>
+                <li><AddCard onAddItem={handleAddItem}/></li>
             );
         }
     }
 
+    const handleAddItem = (newItem) => {
+        console.log('handleAddItem');
+        setItems([...items, newItem]); 
+        console.log(items); 
+    }
+
     function createCards() {
         return (
-            merchTabletest.map((item) => (
-                <li key={item.key} className="merch-info">
+            items.map((item, index) => (
+                <li key={index} className="merch-info">
                     <SimpleCard
                         isAuthenticated={props.isAuthenticated}
                         name={item.Name}
