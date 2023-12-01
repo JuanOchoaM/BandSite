@@ -17,7 +17,7 @@ const AddCard = () => {
   
   function postData(data) {
     axios
-        .post('http://127.0.0.1:3000/api/items', data)
+        .post('http://127.0.0.1:3001/api/items', data)
         .then((res) => {
             console.log("Successfully Posted: ");
             console.log(res.data);

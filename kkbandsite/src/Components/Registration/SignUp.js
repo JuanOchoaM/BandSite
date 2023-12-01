@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup.css'
+import axios from 'axios';
+//import UserContext from "../context/UserContext";
 
 export default function SignUp() {
     const [firstName, setFirstName] = useState("First Name");
@@ -15,6 +17,33 @@ export default function SignUp() {
 
     const emailValidation = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+
+    /*
+    async function handleSubmit(e) {
+        e.preventDefault();
+        //setLoading(true);
+        try {
+            const newUser = { email, password, confirmPassword};
+
+            await axios.post("http://localhost:3001/api/users/signup", newUser);
+            const loginRes = await axios.post("http://localhost:3001/api/users/login", {
+                email,
+                password,
+            });
+            setUserData({
+                token: loginRes.data.token,
+                user: loginRes.data.user,
+            });
+            localStorage.setItem("auth-token", loginRes.data.token);
+            //setLoading(false);
+            navigate('/');
+        } catch (err) {
+            //setLoading(false);
+            err.response.data.msg && setEmail(err.response.data.msg);
+            
+        }
+    }
+    */
 
     function onFocus(defaultValue, currentValue, setValue) {
         if (defaultValue === currentValue) {

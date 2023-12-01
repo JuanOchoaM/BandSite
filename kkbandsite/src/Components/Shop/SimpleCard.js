@@ -10,7 +10,7 @@ const simpleCard = (props) => {
 
   function deleteMe() {
     axios
-        .delete(`http://127.0.0.1:3000/api/items/${id}`)
+        .delete(`http://127.0.0.1:3001/api/items/${id}`)
         .then((res) => {
             console.log("Successfully Deleted: ");
             console.log(res.data);

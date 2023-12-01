@@ -1,14 +1,36 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup.css'
+import axios from "axios";
 
 export default function Login(props) {
     const [email, setEmail] = useState("Email");
     const [password, setPassword] = useState("Password");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
+    //const [loading, setLoading] = useState(false);
     const emailValidation = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const navigate = useNavigate(); 
+
+    /*
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const loginUser = { email, password };
+            const loginRes = await axios.post("http://localhost:3001/api/users/login", loginUser)
+            setUserData({
+                token: loginRes.data.token,
+                user: loginRes.data.user,
+            });
+                localStorage.setItem("auth-token", loginRes.data.token);
+                navigate('/');
+        } catch (err) {
+            //setLoading(false);
+            err.response.data.msg && setError(err.response.data.msg);
+        }
+    }
+    */
 
     function onFocus(defaultValue, currentValue, setValue) {
         if (defaultValue === currentValue) {

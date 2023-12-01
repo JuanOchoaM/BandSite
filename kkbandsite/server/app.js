@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 //app.listen(port, () => console.log(`Server running on port
 //${port}`));
 
@@ -23,4 +23,8 @@ mongoose.connect(conn_str)
     });
 
 const items = require('./routes/api/items');
+const users = require('./routes/api/users');
+
 app.use('/api/items', items);
+app.use('/api/users', users);
+

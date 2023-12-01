@@ -9,7 +9,7 @@ const [merchItems, setMerchItems] = useState([]);
     
     useEffect(() => {
         axios
-        .get('http://127.0.0.1:3000/api/items')
+        .get('http://127.0.0.1:3001/api/items')
         .then((res) => {
             console.log(res.data);
             setMerchItems(res.data);
