@@ -3,38 +3,55 @@ import SimpleCard from "../Shop/SimpleCard";
 import AddCard from "../Shop/AddCard";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Button from "react-bootstrap/esm/Button";
+import EditCard from "../Shop/EditCard";
 export default function Merch(props) {
 
 const [merchItems, setMerchItems] = useState([]);
-    
+const [isAuthenticated, setisAuthenticated] = useState(props.isAuthenticated);
+const [editstate, setEditState] = useState(false);
+const [editItem, setEditItem] = useState({});
+
+function changetoEdit(item) {
+    setEditState(true);
+    setEditItem(item);
+}
+
     useEffect(() => {
         axios
         .get('http://127.0.0.1:3001/api/items')
         .then((res) => {
-            console.log(res.data);
             setMerchItems(res.data);
         })
         .catch((err) => {
             console.log('Error from ');
         });
-    }, []);
+    }, [merchItems]);
 
     function loginCheck() {
-        if (props.isAuthenticated) {
+        if (isAuthenticated) {
+            if(!editstate) {
             return (
-                <li key={23} ><AddCard /></li>
+                <li key={1} ><AddCard/></li>
             );
+            }
+            else {
+                return (
+                    <li key={2} ><EditCard item={editItem} setEditState={() => setEditState(false)}/></li>
+                );
+            }
         }
     }
-
+    const editButton = (item) => { if(isAuthenticated) { return <Button style={{padding:0, height: 40, width: 50}} onClick={(e) => {e.preventDefault(); changetoEdit(item)}}>Edit</Button> }}
     function createCards() {
         if (merchItems) {
         return (
             merchItems.map((item) => (
                 <li key={item._id} className="merch-info">
+                         {editButton(item)}
                     <SimpleCard
                         id={item._id}
-                        isAuthenticated={props.isAuthenticated}
+                        isAuthenticated={isAuthenticated}
                         name={item.Name}
                         price={item.Price}
                         image={item.Image}

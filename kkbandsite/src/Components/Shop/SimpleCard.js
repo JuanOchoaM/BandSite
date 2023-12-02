@@ -18,14 +18,12 @@ const simpleCard = (props) => {
         .catch((err) => {
             console.log('Error from ');
         });
-        //Force reloads the page to refresh the list. (I will change this to update state in next iteration)
-        window.location.reload(false)
   }
 
   function isAuthenticated() {
       if(props.isAuthenticated) {
         return (
-        <Button className="buy-button" variant="primary" onClick={() => deleteMe()}> Delete</Button>
+        <Button className="buy-button" variant="primary" onClick={(e) => { e.preventDefault(); deleteMe()}}> Delete</Button>
         );
       }
   }

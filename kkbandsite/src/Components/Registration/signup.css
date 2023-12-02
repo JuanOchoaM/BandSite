@@ -19,16 +19,6 @@
     backdrop-filter: blur(2px);
 }
 
-button {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
-    margin: 10px; 
-    border-style: none;
-    font-size: 24px;
-    font-family: 'Judson', serif;
-    cursor: pointer; 
-}
 
 .signup-submit {
     background-color: #680B2C;
@@ -43,8 +33,8 @@ button {
 input {
     background-color: #D9D9D9;
     border-style: none;
-    padding: 0.75rem;
-    font-size: 18px;
+    padding: 0.25rem;
+    font-size: 14px;
     box-sizing: border-box;
     width: 100%;
     font-family: 'Judson', serif;
