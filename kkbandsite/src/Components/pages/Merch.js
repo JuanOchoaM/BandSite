@@ -8,7 +8,6 @@ import EditCard from "../Shop/EditCard";
 export default function Merch(props) {
 
 const [merchItems, setMerchItems] = useState([]);
-const [isAuthenticated, setisAuthenticated] = useState(props.isAuthenticated);
 const [editstate, setEditState] = useState(false);
 const [editItem, setEditItem] = useState({});
 
@@ -29,7 +28,7 @@ function changetoEdit(item) {
     }, [merchItems]);
 
     function loginCheck() {
-        if (isAuthenticated) {
+        if (props.isAuthenticated) {
             if(!editstate) {
             return (
                 <li key={1} ><AddCard/></li>
@@ -42,7 +41,7 @@ function changetoEdit(item) {
             }
         }
     }
-    const editButton = (item) => { if(isAuthenticated) { return <Button style={{padding:0, height: 40, width: 50}} onClick={(e) => {e.preventDefault(); changetoEdit(item)}}>Edit</Button> }}
+    const editButton = (item) => { if(props.isAuthenticated) { return <Button style={{padding:0, height: 40, width: 50}} onClick={(e) => {e.preventDefault(); changetoEdit(item)}}>Edit</Button> }}
     function createCards() {
         if (merchItems) {
         return (
@@ -51,7 +50,7 @@ function changetoEdit(item) {
                          {editButton(item)}
                     <SimpleCard
                         id={item._id}
-                        isAuthenticated={isAuthenticated}
+                        isAuthenticated={props.isAuthenticated}
                         name={item.Name}
                         price={item.Price}
                         image={item.Image}
