@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup.css'
 import axios from 'axios';
+import { Error } from "@mui/icons-material";
 //import UserContext from "../context/UserContext";
 
-export default function SignUp() {
+export default function SignUp(props) {
     const [firstName, setFirstName] = useState("First Name");
     const [lastName, setLastName] = useState("Last Name");
     const [email, setEmail] = useState("Email");
@@ -13,37 +14,35 @@ export default function SignUp() {
     const [lastNameError, setLastNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
+    const [signUpError, setSignUpError] = useState("");
     const navigate = useNavigate(); 
 
     const emailValidation = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
 
-    /*
-    async function handleSubmit(e) {
-        e.preventDefault();
-        //setLoading(true);
-        try {
-            const newUser = { email, password, confirmPassword};
 
-            await axios.post("http://localhost:3001/api/users/signup", newUser);
-            const loginRes = await axios.post("http://localhost:3001/api/users/login", {
-                email,
-                password,
-            });
-            setUserData({
-                token: loginRes.data.token,
-                user: loginRes.data.user,
-            });
-            localStorage.setItem("auth-token", loginRes.data.token);
-            //setLoading(false);
-            navigate('/');
-        } catch (err) {
-            //setLoading(false);
-            err.response.data.msg && setEmail(err.response.data.msg);
-            
-        }
+   async function createUser() {
+
+            const user = { email: email, password: password};
+            let response;
+            try {
+               await axios.post("http://localhost:3001/api/users/signup", user)
+            } catch (error) {
+                console.log(error.response.data.msg);
+                setSignUpError(error.response.data.msg);
+                return;
+            }
+
+            try {
+                const loginRes = await axios.post("http://localhost:3001/api/users/login", user);
+                localStorage.setItem("auth-token", loginRes.data.token);
+            } catch (error) {
+                setSignUpError(error.response.data.msg);
+            }
+
+            navigate("/");
     }
-    */
+    
 
     function onFocus(defaultValue, currentValue, setValue) {
         if (defaultValue === currentValue) {
@@ -110,8 +109,7 @@ export default function SignUp() {
     function submit(e) {
         e.preventDefault();
         if (validate()) {
-            console.log("navigating");
-            navigate("/")
+            createUser();
         }
     }
 
@@ -139,6 +137,7 @@ export default function SignUp() {
                     <input id="signup-password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} onFocus={(e) => onFocusPassword("Password", e.target.value, setPassword)}/>
                     <p display={passwordError.trim === "" ? 'none' : 'block'} id="signup-password-error">{passwordError}</p>
                 </div>
+                <p display={signUpError.trim === "" ? 'none' : 'block'} id="signup-error">{signUpError}</p>
                 <button class="signup-submit submit-button" onClick={(e) => submit(e)}>Sign Up</button>
                 <a class="form-help" href="/login">Already have an account? Login here!</a>
             </form>

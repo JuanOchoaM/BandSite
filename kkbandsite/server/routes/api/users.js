@@ -8,31 +8,30 @@ const User = require("../../models/User");
 // Signup
 userRouter.post("/signup", async (req, res) => {
     try {
-        const { email, password, confirmPassword } = req.body;
-        if (!email || !password || !confirmPassword) {
+        const {email, password} = req.body;
+        if (!email || !password ) {
+            console.log("Please enter all the fields")
             return res.status(400).json({ msg: "Please enter all the fields"});
         }
         if (password.length < 8) {
-            return res
-                .status(400)
-                .json({ msg: "Password should be atleast 8 characters"});
+            console.log("Password should be atleast 8 characters");
+            return res.status(400).json({ msg: "Password should be atleast 8 characters"});
         }
-        if (confirmPassword !== password) {
-            return res.status(400).json({ msg: "Both the passwords don't match"});
-        }
+
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res
-                .status(400)
-                .json({ msg: "User with the same email already exists"});
+            console.log("User with the same email already exists")
+            return res.status(400).json({ msg: "User with the same email already exists"});
         }
         const hashedPassword = await bcryptjs.hash(password, 8);
+        console.log("hashedPassowrd: " + hashedPassword);
         const newUser = new User({ email, password: hashedPassword});
 
         const savedUser = await newUser.save();
         console.log(savedUser.email);
         res.json(savedUser);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ error: err.message});
     }
 });
