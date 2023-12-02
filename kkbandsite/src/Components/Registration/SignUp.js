@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup.css'
 import axios from 'axios';
-import { Error } from "@mui/icons-material";
-//import UserContext from "../context/UserContext";
 
 export default function SignUp(props) {
     const [firstName, setFirstName] = useState("First Name");
@@ -24,7 +22,6 @@ export default function SignUp(props) {
    async function createUser() {
 
             const user = { email: email, password: password};
-            let response;
             try {
                await axios.post("http://localhost:3001/api/users/signup", user)
             } catch (error) {
@@ -40,6 +37,7 @@ export default function SignUp(props) {
                 setSignUpError(error.response.data.msg);
             }
 
+            props.setIsAuthenticated(true);
             navigate("/");
     }
     

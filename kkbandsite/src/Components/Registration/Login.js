@@ -8,29 +8,26 @@ export default function Login(props) {
     const [password, setPassword] = useState("Password");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
-    //const [loading, setLoading] = useState(false);
+    const [loginError, setLoginError] = useState("");
+
     const emailValidation = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const navigate = useNavigate(); 
 
-    /*
-    async function handleSubmit(e) {
-        e.preventDefault();
-        setLoading(true);
+    
+    async function login() {
+
+        const user = { email: email, password: password};
+
         try {
-            const loginUser = { email, password };
-            const loginRes = await axios.post("http://localhost:3001/api/users/login", loginUser)
-            setUserData({
-                token: loginRes.data.token,
-                user: loginRes.data.user,
-            });
-                localStorage.setItem("auth-token", loginRes.data.token);
-                navigate('/');
-        } catch (err) {
-            //setLoading(false);
-            err.response.data.msg && setError(err.response.data.msg);
+            let response = await axios.post("http://localhost:3001/api/users/login", user);
+            localStorage.setItem("auth-token", response.data.token);
+            props.setIsAuthenticated(true);
+            navigate("/");
+        } catch (error) {
+            setLoginError(error.response.data.msg);
         }
-    }
-    */
+}
+    
 
     function onFocus(defaultValue, currentValue, setValue) {
         if (defaultValue === currentValue) {
@@ -76,10 +73,8 @@ export default function Login(props) {
 
     function submit(e) {
         e.preventDefault();
-        if (validate() && email === "test@uga.edu") {
-            console.log("navigating");
-            props.setIsAuthenticated(true);
-            navigate("/")
+        if (validate()) {
+            login();
         }
     }
 
@@ -98,6 +93,7 @@ export default function Login(props) {
                     <input id="login-password" type="text" value={password} onChange={(e) => setPassword(e.target.value)}  onFocus={(e) => onFocusPassword("Password", e.target.value, setPassword)}/>
                     <p display={passwordError.trim === "" ? 'none' : 'block'} id="signup-password-error">{passwordError}</p>
                 </div>
+                <p display={loginError.trim === "" ? 'none' : 'block'} id="login-error">{loginError}</p>
                 <button class="login-submit submit-button" type="submit" onClick={(e) => submit(e)}>Login</button>
                 <a class="form-help" href="/signup">Don't have an account? Sign up here!</a>
             </form>
