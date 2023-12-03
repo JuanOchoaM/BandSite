@@ -31,12 +31,12 @@ function changetoEdit(item) {
         if (props.isAuthenticated) {
             if(!editstate) {
             return (
-                <li key={1} ><AddCard/></li>
+                <li className="edit-card" key={1} ><AddCard/></li>
             );
             }
             else {
                 return (
-                    <li key={2} ><EditCard item={editItem} setEditState={() => setEditState(false)}/></li>
+                    <li className="edit-card" key={2} ><EditCard item={editItem} setEditState={() => setEditState(false)}/></li>
                 );
             }
         }

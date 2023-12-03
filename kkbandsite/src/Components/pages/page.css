@@ -11,7 +11,14 @@
    margin:12px;
    border-radius: 50px;
    backdrop-filter: blur(3px);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75); 
+   
 };
+
+.edit-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+  background-color: black;
+}
 
 h3 {
   color: white;
@@ -20,6 +27,7 @@ h3 {
 .merch-info {
   display: flex;
   justify-content: center;
+
 }
 
 .card-container {
