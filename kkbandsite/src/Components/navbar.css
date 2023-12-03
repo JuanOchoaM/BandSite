@@ -41,7 +41,8 @@ a {
     margin-left: 50px;
     display: flex;
     margin-bottom: 10px;
-    justify-content:center;
+    justify-content:center; 
+    align-items: center;
 }
 
 .socials:hover {
