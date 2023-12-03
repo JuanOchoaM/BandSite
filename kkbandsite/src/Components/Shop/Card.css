@@ -32,12 +32,12 @@
 
 .buy-button {
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
   margin-top: 15px;
   margin-bottom: 15px; 
   padding: 5px;
   padding-left: 7.5px;
   padding-right: 7.5px; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* This mostly affects the addcard */
