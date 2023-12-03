@@ -36,6 +36,7 @@ a {
 .nav-links {
     margin-left: 50px;
     display: flex;
+    margin-bottom: 10px;
     
 justify-content:center;
 }
