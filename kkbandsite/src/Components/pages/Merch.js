@@ -51,7 +51,7 @@ function changetoEdit(item) {
                         {editButton(item)}
                         <SimpleCard
                             id={item._id}
-                            isAuthenticated={isAuthenticated}
+                            isAuthenticated={props.isAuthenticated}
                             name={item.Name}
                             price={item.Price}
                             image={item.Image}
