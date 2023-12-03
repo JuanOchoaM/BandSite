@@ -48,14 +48,17 @@ function changetoEdit(item) {
         return (
             merchItems.map((item) => (
                 <li key={item._id} className="merch-info">
-                         {editButton(item)}
-                    <SimpleCard
-                        id={item._id}
-                        isAuthenticated={isAuthenticated}
-                        name={item.Name}
-                        price={item.Price}
-                        image={item.Image}
-                        body={item.Body} />
+                    <div className="card-container">
+                        {editButton(item)}
+                        <SimpleCard
+                            id={item._id}
+                            isAuthenticated={isAuthenticated}
+                            name={item.Name}
+                            price={item.Price}
+                            image={item.Image}
+                            body={item.Body} 
+                        />
+                    </div>
                 </li>
             ))
         );
