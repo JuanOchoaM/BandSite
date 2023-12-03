@@ -41,7 +41,7 @@ function changetoEdit(item) {
             }
         }
     }
-    const editButton = (item) => { if(props.isAuthenticated) { return <Button style={{padding:0, height: 40, width: 50}} onClick={(e) => {e.preventDefault(); changetoEdit(item)}}>Edit</Button> }}
+    const editButton = (item) => { if(props.isAuthenticated) { return <Button className="edit-button" onClick={(e) => {e.preventDefault(); changetoEdit(item)}}>Edit</Button> }}
     function createCards() {
         if (merchItems) {
         return (
