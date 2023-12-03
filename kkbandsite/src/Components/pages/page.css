@@ -25,3 +25,9 @@ h3 {
 .card-container {
   position: relative; 
 }
+
+.merchItems li:hover {
+  background-color: rgba(64, 13, 31, 0.96);
+  cursor: pointer; 
+  transform: scale(1.02)
+}
