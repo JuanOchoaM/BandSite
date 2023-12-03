@@ -29,6 +29,10 @@ a {
     padding: 0 40px; 
 }
 
+.Navlink:hover {
+    transform: scale(1.1); 
+}
+
 .socialsbox {
         display: flex;
         margin-left: 50px;
@@ -37,6 +41,9 @@ a {
     margin-left: 50px;
     display: flex;
     margin-bottom: 10px;
-    
-justify-content:center;
+    justify-content:center;
+}
+
+.socials:hover {
+    transform: scale(1.2); 
 }

@@ -37,10 +37,10 @@ export default function NavBar(props) {
                          {props.isAuthenticated ? "Log Out" : "Sign Up / Login"}
                     </NavLink>
                     <div className="socialsbox">
-                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://twitter.com" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
-                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.instagram.com/karmakatmusic/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
-                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.youtube.com/channel/UCpMu9oPD7frkSq-tJSxf4yQ" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
-                    <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.tiktok.com/en/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} />
+                        <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://twitter.com" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} className="socials"/>
+                        <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.instagram.com/karmakatmusic/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} className="socials"/>
+                        <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.youtube.com/channel/UCpMu9oPD7frkSq-tJSxf4yQ" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} className="socials"/>
+                        <SocialIcon fgColor="rgba(64, 13, 31, .8)" bgColor="white" url="https://www.tiktok.com/en/" target="_blank" style={{ height: 5, width: 5, marginLeft: 10 }} className="socials"/>
                     </div>
                 </div>
             </div>
