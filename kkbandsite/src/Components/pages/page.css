@@ -9,7 +9,7 @@
 .merchItems li {
    background-color: rgba(64, 13, 31, 0.9);
    margin:4px;
-   border-radius: 10px;
+   border-radius: 50px;
    backdrop-filter: blur(3px);
 };
 
