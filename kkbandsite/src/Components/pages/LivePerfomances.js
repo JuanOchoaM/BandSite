@@ -11,7 +11,7 @@ export default function LivePerformances() {
             console.log('Script loaded successfully');
             const box = document.getElementById('box');
             if (box) {
-                box.textContent = 'The script has loaded.';
+                console.log('The script has loaded.');
             } else {
                 console.error("Element with ID 'box' not found.");
             }
