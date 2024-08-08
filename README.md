@@ -1,5 +1,5 @@
-#![Untitled-removebg](https://github.com/user-attachments/assets/f69c65ad-4462-42ca-b1b5-a57cc77adc0d)
- Karma Kat BandSite
+![Karma_Kat2](https://github.com/user-attachments/assets/bf515f97-66ed-460a-9008-36ab6514f7c8)
+Karma Kat BandSite
 Karma Kat Website (Merch Store)
 
 Welcome to the Karma Kat Website! This project is a web application built to showcase a music band based in Athens. It includes various features such as user authentication, embedded Spotify music player, tour date listings, and even merch! (database not connected to gh-pages)
@@ -21,3 +21,4 @@ Technologies Used
 Project Overview
 
 This project was a fun and educational experience! The primary focus was to create a user-friendly platform where fans can interact with the band, listen to their music, and stay updated with their tour dates.
+#![Untitled-removebg](https://github.com/user-attachments/assets/f69c65ad-4462-42ca-b1b5-a57cc77adc0d)
