@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/BandSite/static/css/main.ad08aa7a.css",
+    "main.js": "/BandSite/static/js/main.4b14ceff.js",
+    "static/js/787.73c1aace.chunk.js": "/BandSite/static/js/787.73c1aace.chunk.js",
+    "static/media/sign_up_bg.png": "/BandSite/static/media/sign_up_bg.2181fb8421ce7a5805fe.png",
+    "static/media/Karma_Kat2 copy.png": "/BandSite/static/media/Karma_Kat2 copy.518bcded21114cf8bfaa.png",
+    "index.html": "/BandSite/index.html",
+    "main.ad08aa7a.css.map": "/BandSite/static/css/main.ad08aa7a.css.map",
+    "main.4b14ceff.js.map": "/BandSite/static/js/main.4b14ceff.js.map",
+    "787.73c1aace.chunk.js.map": "/BandSite/static/js/787.73c1aace.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad08aa7a.css",
+    "static/js/main.4b14ceff.js"
+  ]
+}
