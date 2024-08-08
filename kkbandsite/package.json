@@ -28,13 +28,16 @@
     "react-social-icons": "^6.7.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://juanochoam.github.io/BandSite",
   "scripts": {
     "app": "nodemon ./server/app.js",
     "start": "react-scripts start",
     "start-s": "node ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +58,8 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nodemon": "^3.0.1"
   }
 }
+
